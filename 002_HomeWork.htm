@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function Add(a, b) {
+            var result = a + b;
+            document.write("<p>Summa a and b is: " + result);
+        }
+
+        function Sub(a, b) {
+            var result = a - b;
+            document.write("<p>Subtraction a and b is: " + result);
+        }
+
+        function Mul(a, b){
+            var result = a * b;
+            document.write("<p>Multiplication a and b is: " + result);
+        }
+
+        function Div(a, b){
+            
+            if(b == 0){
+                document.write("You can't divided by zero");
+            }
+            else{
+                var result = (a / b);
+                document.write("<p>Divide a and b is: " + result);
+            }
+        }
+        var number1 = prompt("Input first value: ");
+        var operation = prompt("Choose the operation Add, Sub, Mul, Div");
+        var number2 = prompt("Input second value: ");
+        //var result = undefined;
+        number1 = parseInt(number1);
+        number2 = parseInt(number2);
+
+        switch(operation){
+            case "Add":{
+                Add(number1, number2);
+                break;
+            }
+            case "Sub":{
+                Sub(number1, number2);
+                break;
+            }
+            case "Mul":{
+                Mul(number1, number2);
+                break;
+            }
+            case "Div":{
+                Div(number1, number2);
+                break;
+            }
+            default:{
+                document.write("<p>You are insert a nonexistent operation");
+                break;
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+</body>
+
+</html>
